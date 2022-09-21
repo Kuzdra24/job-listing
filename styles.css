@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --aqua-blue: #5DA4A4;
+    --dirty-white: #F0FAFB;
+    --white: #FFFFFF;
+    --gray: #7D8786;
+    --light-aqua: #F3F5F8;
+    --dark: #2A3A37;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--dirty-white)
+}
+
+header {
+    background-image: url(./images/bg-header-desktop.svg);
+    width: 100%;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--aqua-blue);
+    margin-bottom: 60px;
+    ;
+}
+
+
+.main__container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.company__container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background: var(--white);
+    box-shadow: -1px 2px 22px -1px rgba(144, 173, 173, 0.88);
+    border-radius: 6px;
+    padding: 25px;
+    margin: 17px;
+}
+
+.main__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 25px;
+    padding: 7px
+}
+
+.company__info {
+    display: flex;
+
+}
+
+.add__info-job {
+    display: flex;
+    justify-content: space-between;
+    color: var(--gray);
+    font-weight: 500;
+    font-size: 15px;
+    
+}
+
+
+.section__albility-stack {
+    display: flex;
+    align-items: center;
+}
+
+.albility-stack {
+    background-color: var(--light-aqua);
+    padding: 8px;
+    color: var(--aqua-blue);
+    border-radius: 5px;
+    font-weight: 700;
+    margin: 0 20px;
+    font-size: 14px;
+}
+
+.section__company-new {
+    border-left: 4px solid var(--aqua-blue);
+}
+
+.company__info span {
+    color: var(--aqua-blue);
+    font-weight: 600;
+    letter-spacing: 1px;
+
+}
+
+.new-color {
+    background-color: var(--aqua-blue);
+}
+
+.additional__info {
+    background-color: var(--dark);
+    margin: 0 10px;
+    padding: 2px 8px;
+    color: var(--white);
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.additional__info:first-of-type {
+    background-color: var(--aqua-blue)
+}
+
+.main__info h3 {
+    font-size: 17px;
+    font-weight: bold;
+    color: var(--dark)
+}
