@@ -1,6 +1,6 @@
 import data from "./data.json" assert { type: "json" };
 
-const initCompanyComponent = ({
+const renderCompanyComponent = ({
   isNew,
   company,
   logo,
@@ -42,15 +42,33 @@ const initCompanyComponent = ({
           ${languages.map(
             (lan) => `
             <div class="albility-stack"><p>${lan}</p></div>
-          `)}
+          `
+          )}
           ${tools.map(
             (tool) => `
           <div class="albility-stack"><p>${tool}</p></div>
-          `)}
+          `
+          )}
         </div>
     `;
   wrapper.innerHTML = companyInfo;
   main.appendChild(wrapper);
 };
 
-data.map((data) => initCompanyComponent(data))
+data.map((data) => renderCompanyComponent(data));
+
+//filter List
+
+const button = document.querySelector("header button");
+const filterList = document.querySelector("#filter");
+let isVis = true;
+
+const viewFilterForm = (isVisible) => {
+  isVisible
+    ? (filterList.classList = "container__filtering")
+    : (filterList.classList = "container__filtering-unvisable");
+
+  isVis = !isVis;
+};
+
+button.addEventListener("click", () => viewFilterForm(isVis));

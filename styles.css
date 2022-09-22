@@ -5,7 +5,7 @@
     --dirty-white: #F0FAFB;
     --white: #FFFFFF;
     --gray: #7D8786;
-    --light-aqua: #F3F5F8;
+    --light-aqua: #e5ecf5;
     --dark: #2A3A37;
 }
 
@@ -18,7 +18,8 @@
 body {
     height: 100vh;
     width: 100vw;
-    background-color: var(--dirty-white)
+    background-color: var(--dirty-white);
+    overflow-x: hidden;
 }
 
 header {
@@ -28,21 +29,90 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     background-color: var(--aqua-blue);
-    margin-bottom: 60px;
-    ;
+
+    display: flex;
+    align-items: center;
+
 }
 
+header button {
+    margin: 30px;
+    padding: 6px 16px;
+    background-color: rgba(0, 0, 0, 0.208);
+    border: 2px solid white;
+    color: var(--white);
+    letter-spacing: 1px;
+    transition: background-color .2s ease-in-out, padding .2s ease-in-out;
+    cursor: pointer;
+}
+
+#container {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+header button:hover {
+    background-color: rgba(0, 0, 0, 0.315);
+    padding: 7px 17px;
+}
+
+.container__filtering {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+    max-width: 200px;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--white);
+    box-shadow: -1px 2px 22px -1px rgba(166, 166, 166, 0.75);
+    margin-right: 50px;
+}
+
+.container__filtering-unvisable {
+    display: none;
+}
+
+.roles-container,
+.level-container,
+.languages-conteiner,
+.tools-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.role,
+.level,
+.language,
+.tool {
+    background-color: var(--light-aqua);
+    padding: 8px;
+    color: var(--aqua-blue);
+    border-radius: 5px;
+    font-weight: 700;
+    margin: 6px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#filter h3 {
+    margin: 25px 0 10px 0;
+    color: var(--dark);
+    letter-spacing: 1px;
+}
 
 .main__container {
     width: 100%;
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 60px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
 }
+
 
 .company__container {
     display: flex;
@@ -65,7 +135,6 @@ header {
 
 .company__info {
     display: flex;
-
 }
 
 .add__info-job {
@@ -74,7 +143,6 @@ header {
     color: var(--gray);
     font-weight: 500;
     font-size: 15px;
-    
 }
 
 
